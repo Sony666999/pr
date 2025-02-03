@@ -1,0 +1,687 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Темная тема */
+.dark-theme {
+  background-color: #252B39;
+}
+.dark-theme header {
+  background-color: #252B39; /* Цвет шапки для темной темы */
+}
+.dark-theme .add-habit-content input[type="text"],
+.dark-theme .add-habit-content input[type="number"],
+.dark-theme .edit-habit-content input[type="text"] {
+    background-color: #90A9BD;
+    border: 1px solid #252B39;
+    color: #252B39;
+}
+
+.dark-theme .settings-header button, 
+.dark-theme .setting-group,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme nav button,
+.dark-theme label,
+.dark-theme th,
+.dark-theme td,
+.dark-theme .settings-panel label,
+.dark-theme #font-size-display {
+  color: #90A9BD;
+}
+
+.dark-theme{
+  color: #252B39
+}
+
+.dark-theme .calendar td {
+  border-color: #252B39;
+}
+.dark-theme .calendar th{
+  border-color: #252B39;
+}
+.dark-theme .calendar td.selected{
+  background-color: #90A9BD;
+}
+.dark-theme .habits-list li.completed{
+background-color: #90A9BD;
+}
+.dark-theme .habits-list li button .fa-check-square{
+  color: #252B39;
+}
+.dark-theme .add-habit-modal .close-add-habit-modal-btn,
+.dark-theme .add-habit-modal .save-habit-btn,
+.dark-theme .save-edit-habit-btn, 
+.dark-theme .close-edit-habit-modal-btn{
+  background-color: #252B39;
+  border: 1px solid #90A9BD;
+  color: #90A9BD;
+}
+.dark-theme .settings-panel {
+  background-color: #252B39;
+  box-shadow: -2px 0 5px #90a9bda7;
+}
+.dark-theme .calendar-container,
+.dark-theme .habits-container {
+  border-color: #90A9BD;
+}
+.dark-theme .add-habit-content, 
+.dark-theme .edit-habit-content{
+  background-color: #252B39;
+}
+
+/* Светлая тема */
+.light-theme {
+  background-color: #ffffff;
+}
+.light-theme header {
+  background-color: #ffffff;
+}
+
+.light-theme .add-habit-content input[type="text"],
+.light-theme .add-habit-content input[type="number"], 
+.light-theme .edit-habit-content input[type="text"] {
+  border: 1px solid #252B39;
+  color: #252B39;
+}
+
+.light-theme,
+.light-theme .settings-header button,
+.light-theme .setting-group,
+.light-theme .settings-panel label,
+.light-theme #font-size-display,
+.light-theme nav button
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme label,
+.light-theme th,
+.light-theme td{
+  color: #252B39;
+}
+
+.light-theme .calendar td {
+  border-color: #90A9BD;
+}
+.light-theme .calendar th{
+  background-color: #90A9BD;
+  border-color: #90A9BD;
+}
+
+.light-theme .habits-list li.completed,
+.light-theme .calendar td.selected {
+ background-color: #90A9BD;
+}
+.light-theme .habits-list li button .fa-check-square {
+   color: #252B39;
+}
+.light-theme .calendar-container,
+.light-theme .habits-container {
+  border: 1px solid #252B39;
+}
+.light-theme .add-habit-modal .close-add-habit-modal-btn,
+.light-theme .add-habit-modal .save-habit-btn,
+.light-theme .save-edit-habit-btn, 
+.light-theme .close-edit-habit-modal-btn{
+  background-color: #90A9BD;
+  border: 1px solid #252B39;
+  color: #252B39;
+}
+.light-theme .settings-panel {
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px #252b3984;
+}
+.light-theme .add-habit-content, 
+.light-theme .edit-habit-content{
+  background-color: #ffffff;
+}
+
+
+/* Красная тема */
+.red-theme {
+  background-color: #AD3743;
+}
+.red-theme header {
+  background-color: #AD3743;  
+}
+.red-theme .add-habit-content input[type="text"],
+.red-theme .add-habit-content input[type="number"],
+.red-theme .edit-habit-content input[type="text"] {
+    background-color: #FB605E;
+    border: 1px solid #AD3743;
+    color: #ffffff;
+}
+
+.red-theme .settings-panel label,
+.red-theme #font-size-display,
+.red-theme label,
+.red-theme th{
+  color: #252B39;
+}
+
+.red-theme .settings-header button, 
+.red-theme .setting-group,
+.red-theme h1,
+.red-theme h2,
+.red-theme h3,
+.red-theme nav button,
+.red-theme th{
+  color: #ffffff;
+}
+ 
+.red-theme td{
+  color: #FB605E;
+}
+
+.red-theme .calendar td.selected,
+.red-theme .calendar th {
+  background-color: #FB605E;
+}
+.red-theme .calendar th,
+.red-theme .calendar td {
+  border-color: #FB605E;
+}
+.red-theme .habits-list li.completed {
+  background-color: #FB605E;
+}
+.red-theme .habits-list li button .fa-check-square {
+color: #AD3743;
+}
+.red-theme .add-habit-modal .close-add-habit-modal-btn,
+.red-theme .add-habit-modal .save-habit-btn,
+.red-theme .save-edit-habit-btn, 
+.red-theme .close-edit-habit-modal-btn{
+  background-color: #AD3743;
+  color: #ffffff;
+}
+.red-theme .calendar-container,
+.red-theme .habits-container {
+  border-color: #FB605E;
+}
+
+.red-theme .settings-panel {
+  background-color: #FB605E;
+  box-shadow: -2px 0 5px #ffffffae;
+}
+
+.red-theme .add-habit-content, .red-theme .edit-habit-content{
+  background-color: #FB605E;
+}
+
+/* Синяя тема */
+.blue-theme {
+  background-color: #cceeff;
+}
+.blue-theme header {
+  background-color: #aaddff; 
+}
+
+.blue-theme .add-habit-content input[type="text"],
+.blue-theme .add-habit-content input[type="number"],
+.blue-theme .edit-habit-content input[type="text"] {
+    background-color: #ddf0ff;
+    border: 1px solid #aaddff;
+    color: #252B39;
+}
+
+.blue-theme,
+.blue-theme h1,
+.blue-theme h2,
+.blue-theme h3,
+.blue-theme p,
+.blue-theme label,
+.blue-theme th,
+.blue-theme td,
+.blue-theme .settings-panel label,
+.blue-theme #font-size-display,
+.blue-theme nav button,
+.blue-theme .settings-header button,
+.blue-theme .setting-group {
+  color: #0055aa;
+}
+
+.blue-theme .calendar th {
+  background-color: #208dd5;
+}
+.blue-theme .calendar td.selected {
+  background-color: #0055aa;
+}
+.blue-theme .calendar th,
+.blue-theme .calendar td {
+ border-color: #cceeff;
+}
+.blue-theme .habits-list li.completed {
+  background-color: #88bbee;
+}
+.blue-theme .habits-list li button .fa-check-square {
+ color: #0055aa;
+}
+.blue-theme .calendar-container,
+.blue-theme .habits-container {
+  border-color: #aaddff;
+}
+.blue-theme .add-habit-modal .close-add-habit-modal-btn,
+.blue-theme .add-habit-modal .save-habit-btn,
+.blue-theme .save-edit-habit-btn, .close-edit-habit-modal-btn{
+  background-color: #0055aa;
+  color: #aaddff;
+}
+
+.blue-theme .settings-panel {
+  background-color: #cceeff;
+  box-shadow: -2px 0 5px #88bbeec8;
+}
+
+.blue-theme .add-habit-content, .blue-theme .edit-habit-content{
+  background-color: #cceeff;
+}
+
+/* Стили шапки */
+header {
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+nav h1 {
+  margin: 0;
+}
+
+/* Стили кнопок навбара */
+nav button {
+  background: none;
+  border: none;  
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Стили боковой панели настроек */
+.settings-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 60%;
+  width: 200px;
+  display: flex;
+  flex-direction: column; 
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  transform: translateX(100%);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.settings-panel.open {
+  transform: translateX(0);
+}
+
+/* Стили заголовка боковой панели */
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.settings-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Стили содержимого боковой панели */
+.settings-content {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.setting-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+.setting-group label {
+  margin-right: 10px;
+  display: block; 
+  margin-bottom: 5px;
+}
+/* Стили слайдера */
+#font-size-slider {
+  width: 100px;
+}
+#font-size-display {
+  display: block;
+}
+/* Стили main */
+main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Стили основных блоков */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+/* Стили контейнера календаря */
+.calendar-container {
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+/* Стили заголовка календаря */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.calendar-header button{
+  background: none;
+   border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Стили таблицы календаря */
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* Стили заголовков таблицы календаря */
+.calendar th {
+  border: 2px solid;
+  padding: 8px;
+  text-align: center;
+}
+/* Стили ячеек таблицы календаря */
+.calendar td {
+   border: 2px solid;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+/* Выделение выбранной ячейки календаря */
+.calendar td.selected {
+  color: white;
+}
+/* Стили контейнера списка привычек */
+.habits-container {
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+
+/* Стили заголовка списка привычек */
+.habits-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.habits-header h2, .habits-header h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Стили списка привычек */
+.habits-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Стили элементов списка привычек */
+.habits-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.habits-list li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.habits-list li span {
+    margin-right: 10px;
+}
+
+/* Стили для счетчика выполненных заданий */
+#task-counter-header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+/* Стили модального окна добавления привычки */
+.add-habit-modal,
+.edit-habit-modal  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.add-habit-content,
+.edit-habit-content {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 500px;
+}
+
+.add-habit-content h2,
+.edit-habit-content h2  {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.add-habit-content label,
+.edit-habit-content label {
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+}
+
+.add-habit-content input[type="text"],
+.add-habit-content input[type="number"],
+.edit-habit-content input[type="text"]  {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Стили модального окна редактирования привычки */
+.edit-habit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Скрыть модальные окна */
+.add-habit-modal.hidden, .settings-panel.hidden, .edit-habit-modal.hidden {
+  display: none;
+}
+
+/* Стили содержимого модальных окон */
+.add-habit-content, .edit-habit-content {
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 500px;
+  max-width: 800px;
+}
+
+/* Стили кнопок модальных окон */
+.close-add-habit-modal-btn, .save-habit-btn, .save-edit-habit-btn, .close-edit-habit-modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* Стили модального окна с информацией о привычке */
+.info-habit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.info-habit-content {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 500px;
+  background-color: #ddf0ff;
+}
+
+.info-habit-content h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-habit-content p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.edit-habit-btn, .close-info-habit-modal-btn {
+  padding: 10px 20px;
+  background-color: #208dd5;
+  color: #ddf0ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.edit-habit-btn:hover, .close-info-habit-modal-btn:hover {
+  background-color: #0055aa;
+}
+
+/* Стили модального окна редактирования привычки */
+.edit-habit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.edit-habit-content {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #252B39;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 500px;
+  background-color: #ddf0ff;
+}
+
+.edit-habit-content h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.edit-habit-content label {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.edit-habit-content input[type="text"],
+.edit-habit-content input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.save-edit-habit-btn, .close-edit-habit-modal-btn {
+  padding: 10px 20px;
+  background-color: #0055aa;
+  color: #ddf0ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.save-edit-habit-btn:hover, .close-edit-habit-modal-btn:hover {
+  background-color: #208dd5;
+}
+
+.hidden {
+  display: none;
+}

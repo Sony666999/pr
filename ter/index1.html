@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-Трекер Привычек</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Кнопка добавления привычки -->
+            <button class="add-habit-btn">
+               <i class="fas fa-plus"></i>
+            </button>
+            <h1>Трекер привычек</h1>
+             <!-- Кнопка настроек -->
+            <button class="settings-btn">
+               <i class="fas fa-cog"></i>
+            </button>
+        </nav>
+         <!-- Боковая панель настроек -->
+        <div class="settings-panel hidden">
+            <div class="settings-header">
+                <h1>Настройки</h1>
+                 <button class="close-settings-btn">
+                    <i class="fas fa-times"></i>
+                 </button>
+            </div>
+            <div class="settings-content">
+               <div class="setting-group">
+                     <label for="theme-selector">Тема:</label>
+                    <select id="theme-selector">
+                       <option value="light">Светлая</option>
+                        <option value="dark">Темная</option>
+                       <option value="red">Красная</option>
+                      <option value="blue">Синяя</option>
+                  </select>
+               </div>
+                <div class="setting-group">
+                   <label for="font-size-slider">Размер текста:</label>
+                   <input type="range" id="font-size-slider" min="12" max="20" value="16">
+                    <span id="font-size-display">16</span>
+               </div>
+            </div>
+        </div>
+         <!-- Модальное окно добавления привычки -->
+        <div class="add-habit-modal hidden">
+           <div class="add-habit-content">
+                <h2>Добавить привычку</h2>
+                 <label for="habit-name">Название привычки:</label><br>
+                  <input type="text" id="habit-name"><br>
+                 <label for="habit-frequency">Частота в неделю:</label>
+                  <input type="number" id="habit-frequency" min="1" max="7"><br>
+                  <button class="save-habit-btn">Сохранить</button>
+                  <button class="close-add-habit-modal-btn">Закрыть</button>
+            </div>
+        </div>
+        <!-- Модальное окно с информацией о привычке -->
+<div class="info-habit-modal hidden" id="infoModal">
+   <div class="info-habit-content">
+       <h2>Информация о привычке</h2>
+       <p><strong>Название:</strong> <span id="infoHabitName"></span></p>
+       <p><strong>Стрик:</strong> <span id="infoStreak"></span></p>
+       <p><strong>Дни:</strong> <span id="infoDays"></span></p>
+       <button class="edit-habit-btn">Редактировать</button>
+       <button class="close-info-habit-modal-btn">Закрыть</button>
+   </div>
+</div>
+
+<!-- Модальное окно редактирования привычки -->
+<div class="edit-habit-modal hidden" id="editModal">
+   <div class="edit-habit-content">
+       <h2>Редактировать привычку</h2>
+       <label for="editHabitName">Название привычки:</label><br>
+       <input type="text" id="editHabitName"><br>
+       <label for="editHabitFrequency">Частота в неделю:</label>
+       <input type="number" id="editHabitFrequency" min="1" max="7"><br>
+       <button class="save-edit-habit-btn">Сохранить</button>
+       <button class="close-edit-habit-modal-btn">Закрыть</button>
+   </div>
+</div>
+
+        <!-- Модальное окно редактирования привычки -->
+        <div class="edit-habit-modal hidden">
+           <div class="edit-habit-content">
+              <h2>Редактировать привычку</h2>
+              <label for="edit-habit-name">Название привычки:</label><br>
+               <input type="text" id="edit-habit-name"><br>
+              <button class="save-edit-habit-btn">Сохранить</button>
+              <button class="close-edit-habit-modal-btn">Закрыть</button>
+           </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-grid">
+             <!-- Календарь -->
+            <div class="calendar-container">
+                 <div class="calendar-header">
+                      <button id="prev-month">
+                        <i class="fas fa-chevron-left"></i>
+                     </button>
+                      <h1 id="month-year"></h1>
+                     <button id="next-month">
+                      <i class="fas fa-chevron-right"></i>
+                       </button>
+                 </div>
+                  <table class="calendar">
+                       <thead>
+                          <tr>
+                              <th>Пн</th>
+                               <th>Вт</th>
+                              <th>Ср</th>
+                              <th>Чт</th>
+                               <th>Пт</th>
+                             <th>Сб</th>
+                               <th>Вс</th>
+                           </tr>
+                      </thead>
+                      <tbody>
+                        </tbody>
+                  </table>
+             </div>
+            <!-- Список привычек -->
+            <div class="habits-container">
+               <div class="habits-header">
+                  <h2>Привычки</h2>
+               </div>
+               <ul class="habits-list"></ul>
+               <h3 id="task-counter-header">Выполнено заданий: <span id="task-count">0</span></h3>
+            </div>
+        </div>
+    </main>
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #90A9BD; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    color: #252B39; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.start-button {
+    background-color: #475464; 
+    color: #90A9BD;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #AD3743; 
+}
+
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-image {
+    position: absolute;
+    opacity: 0.7;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.img1 {
+    width: 15%;
+    top: 10%;
+    left: 5%;
+}
+
+.img2 {
+    width: 20%;
+    top: 60%;
+    right: 5%;
+}
+
+.img3 {
+    width: 12%;
+    bottom: 10%;
+    left: 40%;
+}
+
+.img4 {
+    width: 18%;
+    top: 20%;
+    right: 20%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .start-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .img1 {
+        width: 20%;
+        top: 5%;
+        left: 5%;
+    }
+
+    .img2 {
+        width: 25%;
+        top: 50%;
+        right: 5%;
+    }
+
+    .img3 {
+        width: 15%;
+        bottom: 5%;
+        left: 30%;
+    }
+
+    .img4 {
+        width: 22%;
+        top: 15%;
+        right: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .start-button {
+        font-size: 0.8em;
+        padding: 8px 16px;
+    }
+
+    .img1 {
+        width: 25%;
+        top: 3%;
+        left: 3%;
+    }
+
+    .img2 {
+        width: 30%;
+        top: 40%;
+        right: 3%;
+    }
+
+    .img3 {
+        width: 20%;
+        bottom: 3%;
+        left: 20%;
+    }
+
+    .img4 {
+        width: 25%;
+        top: 10%;
+        right: 10%;
+    }
+}
