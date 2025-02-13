@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Анализ цели при загрузке страницы
-    ym(99900289, 'reachGoal', 'посещение');
-    
+    ym(99900289, 'reachGoal', 'Достижение целевой продолжительности визита');
+
     // --- Переменные для работы со страницами ---
     const body = document.body;
     const settingsBtn = document.querySelector('.settings-btn');
